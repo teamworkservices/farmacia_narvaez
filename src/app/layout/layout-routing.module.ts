@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DosificacionComponent } from '../components/dosificacion/dosificacion.component';
 import { LayoutfullComponent } from './layoutfull/layoutfull.component';
 
 const routes: Routes = [
- 
+ {
+   path:'dosificacion',
+   component:DosificacionComponent,
+ }
 
 ];
-
-
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
