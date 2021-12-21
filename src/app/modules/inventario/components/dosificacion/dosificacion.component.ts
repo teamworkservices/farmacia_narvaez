@@ -2,17 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Dosificacion } from 'src/app/shared/models/dosificacion';
 
-
 @Component({
   selector: 'app-dosificacion',
   templateUrl: './dosificacion.component.html',
   styleUrls: ['./dosificacion.component.css']
 })
 export class DosificacionComponent implements OnInit {
-
-  //dosificacion:Dosificacion={codigo:'ss', descripcion:'dd', id:3, nombre:'ii'};
-
-  displayedColumns: string[] = ['id', 'nombre', 'descripcion', 'codigo'];
+  displayedColumns: string[] = ['id'];
 
   dosificacionData: Dosificacion[]=[
     {id:1, nombre:'Hydrogen', descripcion:'descripcion', codigo:'H'},
@@ -21,9 +17,7 @@ export class DosificacionComponent implements OnInit {
   ];
 
   dataSource!: MatTableDataSource<Dosificacion>
-  constructor() {
-    
-   }
+  constructor() { }
 
   ngOnInit(): void {
     this.dataSource=new MatTableDataSource<Dosificacion>([]);
