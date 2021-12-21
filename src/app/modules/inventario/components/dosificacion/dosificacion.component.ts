@@ -8,7 +8,7 @@ import { Dosificacion } from 'src/app/shared/models/dosificacion';
   styleUrls: ['./dosificacion.component.css']
 })
 export class DosificacionComponent implements OnInit {
-  displayedColumns: string[] = ['id'];
+  displayedColumns: string[] = ['id', 'nombre', 'descripcion', 'codigo'];
 
   dosificacionData: Dosificacion[]=[
     {id:1, nombre:'Hydrogen', descripcion:'descripcion', codigo:'H'},
