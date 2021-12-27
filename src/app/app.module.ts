@@ -4,6 +4,9 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { AppRoutingModule } from './app-routing.module';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     BrowserModule,
     LayoutModule,
     AppRoutingModule,
-    MatGridListModule
+    MatGridListModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
