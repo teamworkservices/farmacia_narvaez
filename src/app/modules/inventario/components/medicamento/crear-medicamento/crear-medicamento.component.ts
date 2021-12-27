@@ -21,9 +21,9 @@ export class CrearMedicamentoComponent implements OnInit {
     this.form = this.fb.group({
       codigoCompraCtrl: ['', [Validators.required, Validators.maxLength(3)]],
       codigoBarraCtrl: ['', [Validators.required, Validators.maxLength(20)]],
-      nombre:['', [Validators.required, Validators.maxLength(20)]],
-      cantidad:['', [Validators.required, Validators.maxLength(20)]],
-      precio:['', [Validators.required, Validators.maxLength(20)]],
+      nombreCtrl:['', [Validators.required, Validators.maxLength(20)]],
+      cantidadCtrl:['', [Validators.required, Validators.maxLength(20)]],
+      precioCtrl:['', [Validators.required, Validators.maxLength(20)]],
 
 
     })
@@ -35,9 +35,12 @@ export class CrearMedicamentoComponent implements OnInit {
   agregarMedicamento(){
     if (this.form.valid) {
       let medicamento = new Medicamento();
-      // dosificacion.codigo = this.form.value['codigoCtrl'];
-      // dosificacion.nombre = this.form.value['nombreCtrl'];
-      
+    
+      medicamento.codigoCompra = this.form.value['codigoCompraCtrl'];
+      medicamento.codBarra= this.form.value['codigoBarraCtrl'];
+      medicamento.nombre= this.form.value['nombreCtrl'];
+      medicamento.cantidad = this.form.value['cantidadCtrl'];
+      medicamento.precio = this.form.value['precioCtrl'];
 
       medicamento = this.medicamentoService.agregarMedicamento(medicamento);
       this.dialogRef.close(medicamento);
