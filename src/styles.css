@@ -19,7 +19,7 @@ a{
     background-color: yellow;
 }
 
-.green{
+.green, .mat-icon-green{
     color: #169DA0;
 }
 
