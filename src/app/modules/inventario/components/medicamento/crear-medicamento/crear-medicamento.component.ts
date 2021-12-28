@@ -3,7 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Medicamento } from 'src/app/shared/models/medicamento';
 import Swal from 'sweetalert2';
-import { MedicamentoService } from '../../../services/medicamento.service ';
+import { MedicamentoService } from '../../../services/medicamento.service';
+//import { MedicamentoService } from '../../../services/medicamento.service';
 
 @Component({
   selector: 'app-crear-medicamento',

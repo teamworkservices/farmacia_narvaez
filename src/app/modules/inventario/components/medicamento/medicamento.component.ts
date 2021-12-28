@@ -3,7 +3,8 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Medicamento } from 'src/app/shared/models/medicamento';
 import Swal from 'sweetalert2';
-import { MedicamentoService } from '../../services/medicamento.service ';
+import { MedicamentoService } from '../../services/medicamento.service';
+//import { MedicamentoService } from '../../services/medicamento.service';
 import { CrearMedicamentoComponent } from './crear-medicamento/crear-medicamento.component';
 import { EditarMedicamentoComponent } from './editar-medicamento/editar-medicamento.component';
 
@@ -16,7 +17,7 @@ export class MedicamentoComponent implements OnInit {
 
   medicamentoData: Medicamento[] = [];
   displayedColumns: string[] = ['idMedicamento', 'codigoCompra','codBarra','nombre', 'cantidad','precio' ,'acciones'];
-
+  
   dataSource!: MatTableDataSource<Medicamento>
   
   constructor(public dialog: MatDialog, public medicamentoService:MedicamentoService) {
