@@ -10,9 +10,9 @@ import { Medicamento } from 'src/app/shared/models/medicamento';
 export class MedicamentoService {
 
   medicamentoData: Medicamento[] = [
-    {idMedicamento: 1, codigoCompra: 'med1', codBarra:'cod1', nombre:'medicamento1',cantidad:3, precio:'2000' },
-    {idMedicamento: 2, codigoCompra: 'med2', codBarra:'cod2', nombre:'medicamento2',cantidad:4, precio:'6000' },
-    {idMedicamento: 3, codigoCompra: 'med3', codBarra:'cod3', nombre:'medicamento3',cantidad:5, precio:'8000' },
+    {idMedicamento: 1, codigoCompra: 'med1', codBarra:'cod1', nombre:'medicamento1',cantidad:3, dosificacion:'Hydrogen', precio:'2000' },
+    {idMedicamento: 2, codigoCompra: 'med2', codBarra:'cod2', nombre:'medicamento2',cantidad:4, dosificacion:'Hdro',precio:'6000' },
+    {idMedicamento: 3, codigoCompra: 'med3', codBarra:'cod3', nombre:'medicamento3',cantidad:5, dosificacion:'Hogen',precio:'8000' },
     
   ];
 

@@ -11,7 +11,11 @@
     <mat-icon>add_circle_outline</mat-icon>
     AGREGAR
   </button>
+
+  <app-buscador-dosificacion></app-buscador-dosificacion>
+
 </mat-toolbar>
+
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -41,9 +45,15 @@
     </ng-container>
 
     <ng-container matColumnDef="precio">
-        <th mat-header-cell *matHeaderCellDef> precio </th>
-        <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
-      </ng-container>
+      <th mat-header-cell *matHeaderCellDef> precio </th>
+      <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dosificacion">
+      <th mat-header-cell *matHeaderCellDef> dosificacion </th>
+      <td mat-cell *matCellDef="let element"> {{element.dosificacion}} </td>
+    </ng-container>
+
 
     <ng-container matColumnDef="acciones">
       <th *matHeaderCellDef id="acciones" mat-header-cell>ACCIÓN</th>
