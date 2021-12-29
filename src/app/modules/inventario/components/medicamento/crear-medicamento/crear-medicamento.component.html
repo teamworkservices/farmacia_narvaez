@@ -45,11 +45,25 @@
 
       <mat-grid-tile [colspan]="1" [rowspan]="1">
         <mat-label>PRECIO:</mat-label>
-      </mat-grid-tile>
+      </mat-grid-tile> 
 
       <mat-grid-tile [colspan]="1" [rowspan]="1">
         <mat-form-field appearance="fill">
           <input matInput #input maxlength="20" autocomplete="off" formControlName="precioCtrl">
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-label>DOSIFICACION:</mat-label>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-form-field appearance="fill">
+          <mat-select formControlName="dosificacionCtrl">
+            <mat-option *ngFor="let nombreDos of nombresDosificaciones" [value] = nombreDos >
+                {{ nombreDos }}
+            </mat-option>
+        </mat-select>
         </mat-form-field>
       </mat-grid-tile>
 
@@ -62,4 +76,6 @@
       </mat-grid-tile>
 
     </mat-grid-list>
+    
+
 </form>

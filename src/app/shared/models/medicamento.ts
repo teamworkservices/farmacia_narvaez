@@ -5,6 +5,7 @@ export class Medicamento {
     nombre!: string;
     cantidad!: number;
     precio!:string;
+    dosificacion!:string;
     
     public constructor(partial?: Partial<Medicamento>) {
       Object.assign(this, partial);

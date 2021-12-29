@@ -16,7 +16,7 @@ import { EditarMedicamentoComponent } from './editar-medicamento/editar-medicame
 export class MedicamentoComponent implements OnInit {
 
   medicamentoData: Medicamento[] = [];
-  displayedColumns: string[] = ['idMedicamento', 'codigoCompra','codBarra','nombre', 'cantidad','precio' ,'acciones'];
+  displayedColumns: string[] = ['idMedicamento', 'codigoCompra','codBarra','nombre', 'cantidad','precio' , 'dosificacion', 'acciones'];
   
   dataSource!: MatTableDataSource<Medicamento>
   
@@ -25,7 +25,8 @@ export class MedicamentoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadMedicamento();
+    // this.loadMedicamento();
+    this.loadTableMedicamento();
   }
 
   openCreateDialog(){
@@ -63,6 +64,7 @@ export class MedicamentoComponent implements OnInit {
   loadTableMedicamento(){
     this.dataSource = new MatTableDataSource<Medicamento>([]);
     this.dataSource.data = this.loadMedicamento();
+    // return this.medicamentoService.getMedicamento();
   }
 
   eliminarMedicamento(medicamento: Medicamento){
